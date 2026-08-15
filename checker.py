@@ -125,7 +125,20 @@ def extract_items(soup: BeautifulSoup, domain: str) -> dict:
         if not title:
             title = f"Item {item_id}"
 
-        items[item_id] = {"title": title, "url": url, "price": price}
+        # Product thumbnail for the dashboard. Amazon lazy-loads some images via
+        # data-* attributes, so check those before the plain src.
+        image = None
+        img = li.select_one("img")
+        if img:
+            image = (
+                img.get("src")
+                or img.get("data-src")
+                or img.get("data-a-hires")
+            )
+            if image and image.startswith("//"):
+                image = "https:" + image
+
+        items[item_id] = {"title": title, "url": url, "price": price, "image": image}
     return items
 
 
@@ -230,6 +243,7 @@ def evaluate(items: dict, history: dict, min_pct: float) -> list:
         rec = history.get(item_id, {})
         rec["title"] = info["title"]
         rec["url"] = info["url"] or rec.get("url")
+        rec["image"] = info.get("image") or rec.get("image")
         rec["last_seen"] = now
 
         reference = max(rec.get("reference_price", 0) or 0, price)
