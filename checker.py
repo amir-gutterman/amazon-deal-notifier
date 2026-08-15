@@ -335,6 +335,21 @@ def send_email(cfg: dict, deals: list) -> None:
 # --------------------------------------------------------------------------- #
 def main() -> None:
     cfg = load_config()
+
+    # One-off delivery test: set SEND_TEST_EMAIL=1/true to send a sample alert
+    # and exit, without touching price history. Used to verify email works.
+    if os.environ.get("SEND_TEST_EMAIL", "").lower() in ("1", "true", "yes"):
+        print("SEND_TEST_EMAIL set — sending a sample alert email and exiting.")
+        demo = [{
+            "title": "✅ TEST — your Amazon deal notifier is working",
+            "url": cfg["wishlist_url"],
+            "price": 9.99,
+            "reference": 19.99,
+            "discount_pct": 50.0,
+        }]
+        send_email(cfg, demo)
+        return
+
     min_pct = float(cfg.get("min_discount_pct", 5))
     history = load_history()
 

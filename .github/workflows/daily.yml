@@ -5,7 +5,12 @@ on:
   schedule:
     # 13:00 UTC daily. Adjust to your timezone (e.g. 13:00 UTC = 09:00 US-Eastern).
     - cron: "0 13 * * *"
-  workflow_dispatch: {}  # lets you run it manually from the Actions tab
+  workflow_dispatch:  # lets you run it manually from the Actions tab
+    inputs:
+      test_email:
+        description: "Send a test email to verify delivery, then exit"
+        type: boolean
+        default: false
 
 permissions:
   contents: write  # needed to commit prices.json back to the repo
@@ -31,6 +36,7 @@ jobs:
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SEND_TEST_EMAIL: ${{ inputs.test_email }}
         run: python checker.py
 
       - name: Commit updated price history
