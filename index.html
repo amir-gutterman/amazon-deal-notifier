@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wishlist Deal Tracker</title>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --ink: #1a2330;
+    --muted: #6b7684;
+    --line: #e6eaee;
+    --accent: #ff9900;      /* amazon orange */
+    --navy: #131a22;        /* amazon navy */
+    --price: #b12704;       /* price red */
+    --good: #067d62;        /* discount green */
+    --chart: #2f6fd0;
+    --chart-fill: rgba(47,111,208,.14);
+    --shadow: 0 1px 3px rgba(20,30,45,.08), 0 6px 18px rgba(20,30,45,.06);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #0e141b; --card: #161e27; --ink: #e7edf3; --muted: #93a1b0;
+      --line: #24303c; --price: #ff7a66; --good: #37c99e; --chart: #6aa8ff;
+      --chart-fill: rgba(106,168,255,.16);
+      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e141b; --card: #161e27; --ink: #e7edf3; --muted: #93a1b0;
+    --line: #24303c; --price: #ff7a66; --good: #37c99e; --chart: #6aa8ff;
+    --chart-fill: rgba(106,168,255,.16);
+    --shadow: 0 1px 3px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    background: var(--navy); color: #fff; padding: 22px 20px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header .wrap { padding: 0; }
+  h1 { margin: 0; font-size: 22px; letter-spacing: .2px; }
+  h1 .dot { color: var(--accent); }
+  .sub { margin: 6px 0 0; color: #b9c4cf; font-size: 13px; }
+  .sub a { color: var(--accent); text-decoration: none; }
+  main { padding: 22px 0 60px; }
+  .stats { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 18px; }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px 14px; box-shadow: var(--shadow); flex: 1; min-width: 120px;
+  }
+  .stat .n { font-size: 20px; font-weight: 700; }
+  .stat .l { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .item {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; box-shadow: var(--shadow);
+    display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; align-items: center;
+  }
+  .item .title { grid-column: 1; font-weight: 600; }
+  .item .title a { color: var(--ink); text-decoration: none; }
+  .item .title a:hover { color: var(--chart); }
+  .prices { grid-column: 1; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .cur { color: var(--price); font-size: 20px; font-weight: 800; }
+  .ref { color: var(--muted); text-decoration: line-through; font-size: 13px; }
+  .lo { color: var(--muted); font-size: 12px; }
+  .spark { grid-column: 2; grid-row: 1 / span 2; width: 150px; height: 48px; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 700; border-radius: 6px;
+    padding: 2px 8px; color: #fff; background: var(--good);
+  }
+  .badge.flat { background: var(--muted); }
+  .badge.low { background: var(--accent); color: #131a22; }
+  .collecting { grid-column: 2; grid-row: 1 / span 2; width: 150px; font-size: 11px;
+    color: var(--muted); text-align: center; align-self: center; }
+  .note { color: var(--muted); font-size: 13px; margin: 18px 0 0; }
+  .err { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px; color: var(--price); box-shadow: var(--shadow); }
+  @media (max-width: 520px) {
+    .spark, .collecting { width: 110px; }
+    .item { grid-template-columns: 1fr auto; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Wishlist Deal Tracker<span class="dot"> ·</span></h1>
+    <p class="sub" id="sub">Loading…</p>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="stats" id="stats"></div>
+    <div class="grid" id="grid"></div>
+    <p class="note" id="note"></p>
+  </div>
+</main>
+<script>
+const CUR_DEFAULT = "€";
+
+function fmt(n, cur) {
+  return cur + Number(n).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+
+function sparkline(points) {
+  // points: array of numbers (prices) in time order
+  const W = 150, H = 48, pad = 4;
+  const min = Math.min(...points), max = Math.max(...points);
+  const span = (max - min) || 1;
+  const n = points.length;
+  const x = i => pad + (n === 1 ? (W - 2*pad)/2 : i * (W - 2*pad) / (n - 1));
+  const y = v => pad + (1 - (v - min) / span) * (H - 2*pad);
+  const line = points.map((v,i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const area = `${pad},${H-pad} ` + line + ` ${x(n-1).toFixed(1)},${H-pad}`;
+  const lastX = x(n-1).toFixed(1), lastY = y(points[n-1]).toFixed(1);
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="price history">
+    <polygon points="${area}" fill="var(--chart-fill)" stroke="none"/>
+    <polyline points="${line}" fill="none" stroke="var(--chart)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${lastX}" cy="${lastY}" r="3" fill="var(--chart)"/>
+  </svg>`;
+}
+
+function render(data, cur, wishlistUrl) {
+  const items = Object.values(data).filter(v => v.last_price != null);
+  const grid = document.getElementById("grid");
+  const stats = document.getElementById("stats");
+
+  // Derived fields
+  items.forEach(v => {
+    const hist = (v.price_history || []).map(p => p.price);
+    v._pts = hist;
+    v._low = hist.length ? Math.min(...hist, v.last_price) : v.last_price;
+    v._ref = Math.max(v.reference_price || 0, v.last_price);
+    v._off = v._ref > 0 ? (v._ref - v.last_price) / v._ref * 100 : 0;
+    v._atLow = v.last_price <= v._low + 1e-9;
+  });
+  items.sort((a,b) => b._off - a._off || a.title.localeCompare(b.title));
+
+  const onSale = items.filter(v => v._off >= 0.5).length;
+  const lastSeen = items.map(v => v.last_seen).filter(Boolean).sort().pop();
+  const when = lastSeen ? new Date(lastSeen).toLocaleString() : "—";
+
+  document.getElementById("sub").innerHTML =
+    `Tracking ${items.length} item${items.length===1?"":"s"} · last checked ${when}` +
+    (wishlistUrl ? ` · <a href="${wishlistUrl}" target="_blank" rel="noopener">open wishlist ↗</a>` : "");
+
+  stats.innerHTML = `
+    <div class="stat"><div class="n">${items.length}</div><div class="l">Items tracked</div></div>
+    <div class="stat"><div class="n">${onSale}</div><div class="l">Below usual price</div></div>
+    <div class="stat"><div class="n">${items.filter(v=>v._atLow && v._pts.length>1).length}</div><div class="l">At lowest ever</div></div>`;
+
+  grid.innerHTML = items.map(v => {
+    const hasChart = v._pts.length > 1;
+    const chart = hasChart ? sparkline(v._pts)
+      : `<div class="collecting">📈 collecting<br>price data…</div>`;
+    let badge;
+    if (v._off >= 0.5) badge = `<span class="badge${v._atLow && hasChart ? ' low':''}">−${v._off.toFixed(0)}%${v._atLow && hasChart ? ' · lowest' : ''}</span>`;
+    else badge = `<span class="badge flat">at usual price</span>`;
+    const link = v.url ? `<a href="${v.url}" target="_blank" rel="noopener">${v.title}</a>` : v.title;
+    return `<div class="item">
+      <div class="title">${link}</div>
+      <div class="prices">
+        <span class="cur">${fmt(v.last_price, cur)}</span>
+        ${v._ref > v.last_price ? `<span class="ref">${fmt(v._ref, cur)}</span>` : ``}
+        ${badge}
+        <span class="lo">low ${fmt(v._low, cur)}</span>
+      </div>
+      ${chart}
+    </div>`;
+  }).join("");
+
+  document.getElementById("note").textContent =
+    "Prices update once a day. Charts fill in as data accrues. Grocery/produce items whose price loads via JavaScript are not tracked.";
+}
+
+async function load() {
+  try {
+    const bust = "?t=" + Date.now();
+    const [pj, cj] = await Promise.all([
+      fetch("prices.json" + bust).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+      fetch("config.json" + bust).then(r => r.ok ? r.json() : ({})).catch(() => ({})),
+    ]);
+    render(pj, (cj && cj.currency_symbol) || CUR_DEFAULT, cj && cj.wishlist_url);
+  } catch (e) {
+    document.getElementById("sub").textContent = "Could not load price data.";
+    document.getElementById("grid").innerHTML =
+      `<div class="err">Failed to load <code>prices.json</code> (${e}). If you just deployed, wait a minute for GitHub Pages to build, then refresh.</div>`;
+  }
+}
+load();
+</script>
+</body>
+</html>

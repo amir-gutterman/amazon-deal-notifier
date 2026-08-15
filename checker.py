@@ -214,6 +214,7 @@ def fetch_wishlist(url: str) -> dict:
 def evaluate(items: dict, history: dict, min_pct: float) -> list:
     """Update history in place; return list of newly discounted items to notify."""
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     deals = []
 
     for item_id, info in items.items():
@@ -234,6 +235,15 @@ def evaluate(items: dict, history: dict, min_pct: float) -> list:
         reference = max(rec.get("reference_price", 0) or 0, price)
         rec["reference_price"] = reference
         rec["last_price"] = price
+
+        # Append today's price point for the dashboard's trend chart. One point
+        # per day: re-runs on the same day overwrite rather than duplicate.
+        ph = rec.get("price_history", [])
+        if ph and ph[-1].get("date") == today:
+            ph[-1]["price"] = price
+        else:
+            ph.append({"date": today, "price": price})
+        rec["price_history"] = ph[-365:]  # keep at most a year
 
         discount_pct = (reference - price) / reference * 100 if reference > 0 else 0
         last_notified = rec.get("last_notified_price")
