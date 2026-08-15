@@ -1,0 +1,45 @@
+name: Daily Amazon deal check
+
+on:
+  schedule:
+    # 13:00 UTC daily. Adjust to your timezone (e.g. 13:00 UTC = 09:00 US-Eastern).
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}  # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit prices.json back to the repo
+
+concurrency:
+  group: deal-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run deal checker
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python checker.py
+
+      - name: Commit updated price history
+        run: |
+          git config user.name "deal-bot"
+          git config user.email "deal-bot@users.noreply.github.com"
+          if ! git diff --quiet prices.json; then
+            git add prices.json
+            git commit -m "Update price history [skip ci]"
+            git push
+          else
+            echo "No price changes to commit."
+          fi
