@@ -1,5 +1,6 @@
 name: Daily Amazon deal check
 
+# Checks the public Amazon wishlist daily and emails on price drops.
 on:
   schedule:
     # 13:00 UTC daily. Adjust to your timezone (e.g. 13:00 UTC = 09:00 US-Eastern).
