@@ -16,10 +16,14 @@
   "I1QF82IO3Y2NNZ": {
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-08-15T13:47:04+00:00",
+    "last_seen": "2026-08-16T13:29:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
+        "price": 12.95
+      },
+      {
+        "date": "2026-08-16",
         "price": 12.95
       }
     ],
@@ -36,12 +40,16 @@
   },
   "I2LDYDO723S2UN": {
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
-    "last_price": 55.37,
-    "last_seen": "2026-08-15T13:47:04+00:00",
+    "last_price": 54.1,
+    "last_seen": "2026-08-16T13:29:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
         "price": 55.37
+      },
+      {
+        "date": "2026-08-16",
+        "price": 54.1
       }
     ],
     "reference_price": 55.37,
@@ -51,10 +59,14 @@
   "I2YLMQA18NJPB1": {
     "image": "https://m.media-amazon.com/images/I/41TCvYU26CL._SS220_.jpg",
     "last_price": 34.99,
-    "last_seen": "2026-08-15T13:47:04+00:00",
+    "last_seen": "2026-08-16T13:29:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
+        "price": 34.99
+      },
+      {
+        "date": "2026-08-16",
         "price": 34.99
       }
     ],
@@ -65,10 +77,14 @@
   "IWWJMZ0GLGKXD": {
     "image": "https://m.media-amazon.com/images/I/51cfZF8twQL._SS220_.jpg",
     "last_price": 24.29,
-    "last_seen": "2026-08-15T13:47:04+00:00",
+    "last_seen": "2026-08-16T13:29:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
+        "price": 24.29
+      },
+      {
+        "date": "2026-08-16",
         "price": 24.29
       }
     ],
@@ -79,10 +95,14 @@
   "IXZ6EKNKBUTJJ": {
     "image": "https://m.media-amazon.com/images/I/51kyZOKHoTL._SS220_.jpg",
     "last_price": 36.94,
-    "last_seen": "2026-08-15T13:47:04+00:00",
+    "last_seen": "2026-08-16T13:29:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
+        "price": 36.94
+      },
+      {
+        "date": "2026-08-16",
         "price": 36.94
       }
     ],
