@@ -16,7 +16,7 @@
   "I1QF82IO3Y2NNZ": {
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -29,19 +29,27 @@
       {
         "date": "2026-08-17",
         "price": 12.95
+      },
+      {
+        "date": "2026-08-18",
+        "price": 12.95
       }
     ],
     "reference_price": 12.95,
     "title": "Natulim - Detergent in Strips for Washing Machine (50 Washes) - Includes Softener, Eco-Friendly, Hypoallergenic, Made in Spain - Clean and Soft Clothes without Dirting the Planet (Lavender Fragrance)",
-    "url": "https://www.amazon.es/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/-/en/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I28K0LJPSN3GEZ": {
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
     "last_price": 39.99,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
+        "price": 39.99
+      },
+      {
+        "date": "2026-08-18",
         "price": 39.99
       }
     ],
@@ -58,8 +66,8 @@
   },
   "I2LDYDO723S2UN": {
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
-    "last_price": 52.62,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_price": 58.23,
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -72,16 +80,20 @@
       {
         "date": "2026-08-17",
         "price": 52.62
+      },
+      {
+        "date": "2026-08-18",
+        "price": 58.23
       }
     ],
-    "reference_price": 55.37,
+    "reference_price": 58.23,
     "title": "YVE LIFE Cat Toys, 4th Generation True Random Trajectory, Rechargeable Motion Activated Automatic Laser Toy, Interactive Toys for Cats/Kittens/Dogs Indoor | 4th Generation Motion Activated Real Random Trajectory Laser Pointer Cat Toy",
     "url": "https://www.amazon.es/-/en/dp/B0C7GMX4FT/?coliid=I2LDYDO723S2UN&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I2YLMQA18NJPB1": {
     "image": "https://m.media-amazon.com/images/I/41TCvYU26CL._SS220_.jpg",
     "last_price": 34.99,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -93,6 +105,10 @@
       },
       {
         "date": "2026-08-17",
+        "price": 34.99
+      },
+      {
+        "date": "2026-08-18",
         "price": 34.99
       }
     ],
@@ -100,10 +116,24 @@
     "title": "MOFT MagSafe Wallet Stand for iPhone 17/16/15/14/13 Series Compatible with MagSafe, MOVAS Vegan Leather Magnetic Phone Holder with 3 Viewing Angles, 2 Card Holders",
     "url": "https://www.amazon.es/-/en/dp/B0CK2152XG/?coliid=I2YLMQA18NJPB1&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
+  "IH6VDX5QXB2M5": {
+    "image": "https://m.media-amazon.com/images/I/41tNZCf9d7L._SS220_.jpg",
+    "last_price": 37.95,
+    "last_seen": "2026-08-18T13:40:14+00:00",
+    "price_history": [
+      {
+        "date": "2026-08-18",
+        "price": 37.95
+      }
+    ],
+    "reference_price": 37.95,
+    "title": "Natulim \u2013 Detergent Strips for Washing Machine (150 Washes) \u2013 Includes Softening Effect, Eco-Friendly, Hypoallergenic, Made in Spain \u2013 Clean and Soft Clothes Without Dirting the Planet (Lavender) \u2013 2",
+    "url": "https://www.amazon.es/-/en/dp/B0F7N3GRWT/?coliid=IH6VDX5QXB2M5&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+  },
   "IWWJMZ0GLGKXD": {
     "image": "https://m.media-amazon.com/images/I/51cfZF8twQL._SS220_.jpg",
     "last_price": 24.29,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -115,6 +145,10 @@
       },
       {
         "date": "2026-08-17",
+        "price": 24.29
+      },
+      {
+        "date": "2026-08-18",
         "price": 24.29
       }
     ],
@@ -125,7 +159,7 @@
   "IXZ6EKNKBUTJJ": {
     "image": "https://m.media-amazon.com/images/I/51kyZOKHoTL._SS220_.jpg",
     "last_price": 36.94,
-    "last_seen": "2026-08-17T13:37:19+00:00",
+    "last_seen": "2026-08-18T13:40:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -137,6 +171,10 @@
       },
       {
         "date": "2026-08-17",
+        "price": 36.94
+      },
+      {
+        "date": "2026-08-18",
         "price": 36.94
       }
     ],
