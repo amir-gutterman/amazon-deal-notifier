@@ -1,4 +1,9 @@
-"""Offline smoke test for parsing + discount logic (no network, no email)."""
+"""Offline smoke test for parsing + discount logic (no network, no email).
+
+Discounts are measured against the TYPICAL (median) price over recorded
+history, and only after >=3 data points exist — so a temporary price spike
+can't create a phantom discount when the price returns to normal.
+"""
 from bs4 import BeautifulSoup
 import checker
 
@@ -21,7 +26,13 @@ SAMPLE = """
 """
 
 
+def hist(prices):
+    """Build a price_history list over consecutive fake past dates."""
+    return [{"date": f"2026-08-{i+1:02d}", "price": p} for i, p in enumerate(prices)]
+
+
 def run():
+    # --- parsing -----------------------------------------------------------
     soup = BeautifulSoup(SAMPLE, "html.parser")
     items = checker.extract_items(soup, "https://www.amazon.com")
     assert set(items) == {"AAA111", "BBB222", "CCC333"}, items
@@ -30,33 +41,42 @@ def run():
     assert items["CCC333"]["price"] is None
     print("PASS: parsing")
 
-    # Day 1: establish baseline prices (no deals, first sighting).
+    # --- day one: first sighting, no false deal ----------------------------
     history = {}
+    fresh = {"K": {"title": "Keyboard", "url": "u", "price": 120.0, "image": None}}
+    assert checker.evaluate(fresh, history, min_pct=5) == []
+    assert history["K"]["price_history"][-1]["price"] == 120.0
+    print("PASS: day one baseline, no false deal")
+
+    # --- too little history: no deal even on a drop ------------------------
+    # One seeded point + today's = 2 points, still below the 3-point minimum.
+    history = {"K": {"title": "Keyboard", "url": "u", "price_history": hist([120])}}
+    items = {"K": {"title": "Keyboard", "url": "u", "price": 99.0, "image": None}}
+    assert checker.evaluate(items, history, min_pct=5) == [], "needs >=3 points"
+    print("PASS: withholds alerts until enough history")
+
+    # --- genuine drop vs typical price is detected -------------------------
+    history = {"K": {"title": "Keyboard", "url": "u", "price_history": hist([120, 120, 120])}}
+    items = {"K": {"title": "Keyboard", "url": "u", "price": 99.0, "image": None}}
     deals = checker.evaluate(items, history, min_pct=5)
-    assert deals == [], deals
-    assert history["BBB222"]["reference_price"] == 120.00
-    print("PASS: day 1 baseline, no false deals")
+    assert len(deals) == 1 and deals[0]["discount_pct"] == 17.5, deals
+    print("PASS: detects a real drop vs the typical price")
 
-    # Day 2: keyboard drops to $99 (-17.5%) -> should notify. Cable steady.
-    items2 = {
-        "AAA111": {"title": "USB-C Cable 6ft", "url": "u", "price": 19.99},
-        "BBB222": {"title": "Mechanical Keyboard", "url": "u", "price": 99.00},
-    }
-    deals = checker.evaluate(items2, history, min_pct=5)
-    assert len(deals) == 1 and deals[0]["title"] == "Mechanical Keyboard", deals
-    assert deals[0]["discount_pct"] == 17.5, deals
-    print("PASS: day 2 detects the price drop")
+    # --- REGRESSION: a temporary spike must NOT create a phantom deal ------
+    # Mirrors the real YVE case: price spiked then returned to normal.
+    history = {"Y": {"title": "Cat toy", "url": "u",
+                     "price_history": hist([55.37, 54.10, 52.62, 58.23, 58.23])}}
+    items = {"Y": {"title": "Cat toy", "url": "u", "price": 54.33, "image": None}}
+    deals = checker.evaluate(items, history, min_pct=5)
+    assert deals == [], f"spike then normal should NOT be a deal, got {deals}"
+    print("PASS: temporary spike does not create a phantom discount")
 
-    # Day 3: same $99 price -> no repeat notification.
-    deals = checker.evaluate(items2, history, min_pct=5)
-    assert deals == [], deals
-    print("PASS: day 3 no duplicate alert for the same price")
-
-    # Day 4: drops further to $89 -> new low -> notify again.
-    items4 = {"BBB222": {"title": "Mechanical Keyboard", "url": "u", "price": 89.00}}
-    deals = checker.evaluate(items4, history, min_pct=5)
-    assert len(deals) == 1, deals
-    print("PASS: day 4 re-alerts on a new lower low")
+    # --- no repeat alert for the same price --------------------------------
+    history = {"K": {"title": "Keyboard", "url": "u", "last_notified_price": 99.0,
+                     "price_history": hist([120, 120, 120, 99])}}
+    items = {"K": {"title": "Keyboard", "url": "u", "price": 99.0, "image": None}}
+    assert checker.evaluate(items, history, min_pct=5) == [], "no repeat at same price"
+    print("PASS: no duplicate alert for the same price")
 
     print("\nAll logic tests passed.")
 

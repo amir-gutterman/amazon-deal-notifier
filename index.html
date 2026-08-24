@@ -131,6 +131,12 @@ let ITEMS = [], SYM = CUR, THRESH = 5;
 
 function money(n){ return SYM + Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}); }
 
+function median(a){
+  if (!a.length) return 0;
+  const s = [...a].sort((x,y)=>x-y), m = s.length>>1;
+  return s.length%2 ? s[m] : (s[m-1]+s[m])/2;
+}
+
 function relTime(iso){
   const mins = Math.round((Date.now() - new Date(iso).getTime())/60000);
   if (mins < 2) return "just now";
@@ -161,7 +167,7 @@ function draw(){
   const dealsOnly = document.getElementById("dealsOnly").checked;
   const sort = document.getElementById("sort").value;
   let rows = ITEMS.slice();
-  if (dealsOnly) rows = rows.filter(v => v.off >= THRESH);
+  if (dealsOnly) rows = rows.filter(v => v.enough && v.off >= THRESH);
   rows.sort((a,b) =>
     sort==="plow" ? a.price-b.price :
     sort==="phigh" ? b.price-a.price :
@@ -177,7 +183,7 @@ function draw(){
     const thumb = v.image
       ? `<img class="thumb" src="${v.image}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'${initial.replace(/'/g,"")}'}))">`
       : `<div class="thumb ph">${initial}</div>`;
-    const onSale = v.off >= THRESH;
+    const onSale = v.enough && v.off >= THRESH;
     const pills =
       (onSale ? `<span class="pill sale">−${v.off.toFixed(0)}%</span>` : ``) +
       (onSale && v.atLow && v.pts.length>1 ? `<span class="pill low">Lowest ever</span>` : ``);
@@ -205,15 +211,18 @@ function render(data, sym, wishlistUrl, threshold){
   THRESH = (threshold != null) ? threshold : 5;
   ITEMS = Object.values(data).filter(v => v.last_price != null).map(v => {
     const pts = (v.price_history || []).map(p => p.price);
-    const ref = Math.max(v.reference_price || 0, v.last_price);
-    const low = pts.length ? Math.min(...pts, v.last_price) : v.last_price;
+    // "was" price = the typical (median) price, robust to temporary spikes —
+    // not the all-time max, which created phantom discounts.
+    const base = median(pts.length ? pts : [v.last_price]);
+    const low = pts.length ? Math.min(...pts) : v.last_price;
     return { title:v.title, url:v.url, image:v.image, price:v.last_price,
-      ref, low, pts, last_seen:v.last_seen,
-      off: ref>0 ? (ref - v.last_price)/ref*100 : 0,
-      atLow: v.last_price <= low + 1e-9 };
+      ref: base, low, pts, last_seen:v.last_seen,
+      off: base>0 ? (base - v.last_price)/base*100 : 0,
+      atLow: v.last_price <= low + 1e-9,
+      enough: pts.length >= 3 };
   });
 
-  const onSale = ITEMS.filter(v => v.off >= THRESH).length;
+  const onSale = ITEMS.filter(v => v.enough && v.off >= THRESH).length;
   const atLow = ITEMS.filter(v => v.atLow && v.pts.length>1).length;
   const enoughHistory = ITEMS.some(v => v.pts.length>1);
   const lastSeen = ITEMS.map(v=>v.last_seen).filter(Boolean).sort().pop();

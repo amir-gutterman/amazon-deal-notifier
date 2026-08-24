@@ -13,6 +13,7 @@ import json
 import os
 import re
 import smtplib
+import statistics
 import sys
 import time
 from datetime import datetime, timezone
@@ -246,8 +247,7 @@ def evaluate(items: dict, history: dict, min_pct: float) -> list:
         rec["image"] = info.get("image") or rec.get("image")
         rec["last_seen"] = now
 
-        reference = max(rec.get("reference_price", 0) or 0, price)
-        rec["reference_price"] = reference
+        rec["reference_price"] = max(rec.get("reference_price", 0) or 0, price)
         rec["last_price"] = price
 
         # Append today's price point for the dashboard's trend chart. One point
@@ -259,20 +259,30 @@ def evaluate(items: dict, history: dict, min_pct: float) -> list:
             ph.append({"date": today, "price": price})
         rec["price_history"] = ph[-365:]  # keep at most a year
 
-        discount_pct = (reference - price) / reference * 100 if reference > 0 else 0
+        # A discount is measured against the TYPICAL (median) price, not the
+        # highest ever seen. Using the max let a temporary price spike ratchet
+        # the reference up, so a return to normal looked like a fake discount.
+        # The median is robust to such spikes. Needs a few points to be stable.
+        prices_seen = [p["price"] for p in rec["price_history"]]
+        baseline = statistics.median(prices_seen)
+        rec["baseline_price"] = round(baseline, 2)
+
+        discount_pct = (baseline - price) / baseline * 100 if baseline > 0 else 0
         last_notified = rec.get("last_notified_price")
 
-        # Notify when the drop clears the threshold AND this price is a new low
-        # relative to whatever we last alerted on (prevents daily repeats).
+        # Notify when the drop clears the threshold vs the typical price AND this
+        # price is a new low relative to whatever we last alerted on (prevents
+        # daily repeats). Require enough history for a meaningful baseline.
+        enough_history = len(prices_seen) >= 3
         is_new_low = last_notified is None or price < last_notified
-        if discount_pct >= min_pct and is_new_low:
+        if enough_history and discount_pct >= min_pct and is_new_low:
             rec["last_notified_price"] = price
             deals.append(
                 {
                     "title": info["title"],
                     "url": rec["url"],
                     "price": price,
-                    "reference": reference,
+                    "reference": round(baseline, 2),
                     "discount_pct": round(discount_pct, 1),
                 }
             )
