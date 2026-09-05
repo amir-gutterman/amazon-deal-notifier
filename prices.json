@@ -17,7 +17,7 @@
     "baseline_price": 12.95,
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -98,6 +98,10 @@
       {
         "date": "2026-09-04",
         "price": 12.95
+      },
+      {
+        "date": "2026-09-05",
+        "price": 12.95
       }
     ],
     "reference_price": 12.95,
@@ -107,8 +111,8 @@
   "I28K0LJPSN3GEZ": {
     "baseline_price": 44.99,
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
-    "last_price": 44.99,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_price": 56.99,
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
@@ -185,9 +189,13 @@
       {
         "date": "2026-09-04",
         "price": 44.99
+      },
+      {
+        "date": "2026-09-05",
+        "price": 56.99
       }
     ],
-    "reference_price": 47.1,
+    "reference_price": 56.99,
     "title": "Tapo C400 \u2013 Outdoor WiFi Surveillance Camera, 5200mAh Battery, 1080p | Motion and People Detection Battery up to 180 days. Color Night Vision. Supports MicroSD. App Control Tapo.",
     "url": "https://www.amazon.es/-/en/dp/B0FH5J2YK7/?coliid=I28K0LJPSN3GEZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
@@ -195,7 +203,7 @@
     "baseline_price": 25.42,
     "image": "https://m.media-amazon.com/images/I/51oT1PzXiiL._SS220_.jpg",
     "last_price": 25.42,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-24",
@@ -244,6 +252,10 @@
       {
         "date": "2026-09-04",
         "price": 25.42
+      },
+      {
+        "date": "2026-09-05",
+        "price": 25.42
       }
     ],
     "reference_price": 25.42,
@@ -258,11 +270,11 @@
     "url": "https://www.amazon.es/-/en/dp/B07HHG7KXX/?coliid=I2J3R1Y28DKW8J&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I2LDYDO723S2UN": {
-    "baseline_price": 58.02,
+    "baseline_price": 58.23,
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 54.33,
-    "last_price": 56.44,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_price": 62.59,
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -343,9 +355,13 @@
       {
         "date": "2026-09-04",
         "price": 56.44
+      },
+      {
+        "date": "2026-09-05",
+        "price": 62.59
       }
     ],
-    "reference_price": 62.38,
+    "reference_price": 62.59,
     "title": "YVE LIFE Cat Toys, 4th Generation True Random Trajectory, Rechargeable | 4th Generation Motion Activated Real Random Trajectory Laser Pointer Cat Toy",
     "url": "https://www.amazon.es/-/en/dp/B0C7GMX4FT/?coliid=I2LDYDO723S2UN&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
@@ -354,7 +370,7 @@
     "image": "https://m.media-amazon.com/images/I/41TCvYU26CL._SS220_.jpg",
     "last_notified_price": 29.74,
     "last_price": 29.74,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -435,6 +451,10 @@
       {
         "date": "2026-09-04",
         "price": 29.74
+      },
+      {
+        "date": "2026-09-05",
+        "price": 29.74
       }
     ],
     "reference_price": 34.99,
@@ -446,7 +466,7 @@
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 37.18,
     "last_price": 44.99,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -515,6 +535,10 @@
       {
         "date": "2026-09-04",
         "price": 44.99
+      },
+      {
+        "date": "2026-09-05",
+        "price": 44.99
       }
     ],
     "reference_price": 44.99,
@@ -553,7 +577,7 @@
     "baseline_price": 23.99,
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_price": 23.99,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -618,6 +642,10 @@
       {
         "date": "2026-09-04",
         "price": 23.99
+      },
+      {
+        "date": "2026-09-05",
+        "price": 23.99
       }
     ],
     "reference_price": 23.99,
@@ -675,8 +703,8 @@
     "baseline_price": 31.99,
     "image": "https://m.media-amazon.com/images/I/51kyZOKHoTL._SS220_.jpg",
     "last_notified_price": 31.99,
-    "last_price": 38.28,
-    "last_seen": "2026-09-04T16:43:15+00:00",
+    "last_price": 43.94,
+    "last_seen": "2026-09-05T15:46:20+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -757,9 +785,13 @@
       {
         "date": "2026-09-04",
         "price": 38.28
+      },
+      {
+        "date": "2026-09-05",
+        "price": 43.94
       }
     ],
-    "reference_price": 38.57,
+    "reference_price": 43.94,
     "title": "Lenor UNstoppables Perfume Beads for Clothes, 133 Washes (6 x 270g), Freshness Enhancer with Fresh Fragrance",
     "url": "https://www.amazon.es/-/en/dp/B0F1DLNG5D/?coliid=IXZ6EKNKBUTJJ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   }
