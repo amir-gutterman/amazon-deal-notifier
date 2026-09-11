@@ -17,7 +17,7 @@
     "baseline_price": 12.95,
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -122,6 +122,10 @@
       {
         "date": "2026-09-10",
         "price": 12.95
+      },
+      {
+        "date": "2026-09-11",
+        "price": 12.95
       }
     ],
     "reference_price": 12.95,
@@ -132,7 +136,7 @@
     "baseline_price": 44.99,
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
     "last_price": 42.99,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
@@ -233,6 +237,10 @@
       {
         "date": "2026-09-10",
         "price": 42.99
+      },
+      {
+        "date": "2026-09-11",
+        "price": 42.99
       }
     ],
     "reference_price": 56.99,
@@ -243,7 +251,7 @@
     "baseline_price": 25.42,
     "image": "https://m.media-amazon.com/images/I/51oT1PzXiiL._SS220_.jpg",
     "last_price": 25.42,
-    "last_seen": "2026-09-05T15:46:20+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-24",
@@ -296,6 +304,10 @@
       {
         "date": "2026-09-05",
         "price": 25.42
+      },
+      {
+        "date": "2026-09-11",
+        "price": 25.42
       }
     ],
     "reference_price": 25.42,
@@ -313,8 +325,8 @@
     "baseline_price": 59.42,
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 54.33,
-    "last_price": 62.45,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_price": 59.79,
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -419,6 +431,10 @@
       {
         "date": "2026-09-10",
         "price": 62.45
+      },
+      {
+        "date": "2026-09-11",
+        "price": 59.79
       }
     ],
     "reference_price": 62.59,
@@ -430,7 +446,7 @@
     "image": "https://m.media-amazon.com/images/I/41TCvYU26CL._SS220_.jpg",
     "last_notified_price": 29.74,
     "last_price": 29.74,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -535,18 +551,22 @@
       {
         "date": "2026-09-10",
         "price": 29.74
+      },
+      {
+        "date": "2026-09-11",
+        "price": 29.74
       }
     ],
     "reference_price": 34.99,
     "title": "MOFT MagSafe Wallet Stand for iPhone 17/16/15/14/13 Series Compatible with MagSafe, MOVAS Vegan Leather Magnetic Phone Holder with 3 Viewing Angles, 2 Card Holders",
-    "url": "https://www.amazon.es/dp/B0CK2152XG/?coliid=I2YLMQA18NJPB1&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/-/en/dp/B0CK2152XG/?coliid=I2YLMQA18NJPB1&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I3J5ZEF5ABL38F": {
     "baseline_price": 44.99,
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 37.18,
     "last_price": 44.99,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -639,6 +659,10 @@
       {
         "date": "2026-09-10",
         "price": 44.99
+      },
+      {
+        "date": "2026-09-11",
+        "price": 44.99
       }
     ],
     "reference_price": 44.99,
@@ -678,7 +702,7 @@
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_notified_price": 21.59,
     "last_price": 21.59,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -767,6 +791,10 @@
       {
         "date": "2026-09-10",
         "price": 21.59
+      },
+      {
+        "date": "2026-09-11",
+        "price": 21.59
       }
     ],
     "reference_price": 23.99,
@@ -821,11 +849,11 @@
     "url": "https://www.amazon.es/-/en/dp/B019M2EA3Y/?coliid=IWWJMZ0GLGKXD&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "IXZ6EKNKBUTJJ": {
-    "baseline_price": 34.46,
+    "baseline_price": 36.94,
     "image": "https://m.media-amazon.com/images/I/51kyZOKHoTL._SS220_.jpg",
     "last_notified_price": 31.99,
     "last_price": 43.44,
-    "last_seen": "2026-09-10T16:53:23+00:00",
+    "last_seen": "2026-09-11T16:54:32+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -929,6 +957,10 @@
       },
       {
         "date": "2026-09-10",
+        "price": 43.44
+      },
+      {
+        "date": "2026-09-11",
         "price": 43.44
       }
     ],
