@@ -10,7 +10,7 @@
     "baseline_price": 13.24,
     "image": "https://m.media-amazon.com/images/I/61lBijrVkNL._SS220_.jpg",
     "last_price": 13.24,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -55,6 +55,10 @@
       {
         "date": "2026-09-23",
         "price": 13.24
+      },
+      {
+        "date": "2026-09-24",
+        "price": 13.24
       }
     ],
     "reference_price": 13.24,
@@ -72,7 +76,7 @@
     "baseline_price": 12.95,
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -228,6 +232,10 @@
       },
       {
         "date": "2026-09-23",
+        "price": 12.95
+      },
+      {
+        "date": "2026-09-24",
         "price": 12.95
       }
     ],
@@ -402,7 +410,7 @@
     "baseline_price": 25.42,
     "image": "https://m.media-amazon.com/images/I/51oT1PzXiiL._SS220_.jpg",
     "last_price": 25.42,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-24",
@@ -507,6 +515,10 @@
       {
         "date": "2026-09-23",
         "price": 25.42
+      },
+      {
+        "date": "2026-09-24",
+        "price": 25.42
       }
     ],
     "reference_price": 25.42,
@@ -525,7 +537,7 @@
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 54.33,
     "last_price": 58.23,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -682,17 +694,21 @@
       {
         "date": "2026-09-23",
         "price": 58.23
+      },
+      {
+        "date": "2026-09-24",
+        "price": 58.23
       }
     ],
     "reference_price": 64.84,
     "title": "YVE LIFE Cat Toys, 4th Generation True Random Trajectory, Rechargeable | 4th Generation Motion Activated Real Random Trajectory Laser Pointer Cat Toy",
-    "url": "https://www.amazon.es/-/en/dp/B0C7GMX4FT/?coliid=I2LDYDO723S2UN&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/dp/B0C7GMX4FT/?coliid=I2LDYDO723S2UN&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I2PFXCJ309E0T0": {
     "baseline_price": 11.89,
     "image": "https://m.media-amazon.com/images/I/51ThYk7UjIL._SS220_.jpg",
     "last_price": 11.89,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -736,6 +752,10 @@
       },
       {
         "date": "2026-09-23",
+        "price": 11.89
+      },
+      {
+        "date": "2026-09-24",
         "price": 11.89
       }
     ],
@@ -896,7 +916,7 @@
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 28.99,
     "last_price": 28.99,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -1041,6 +1061,10 @@
       {
         "date": "2026-09-23",
         "price": 28.99
+      },
+      {
+        "date": "2026-09-24",
+        "price": 28.99
       }
     ],
     "reference_price": 44.99,
@@ -1084,7 +1108,7 @@
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_notified_price": 21.59,
     "last_price": 23.99,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -1225,6 +1249,10 @@
       {
         "date": "2026-09-23",
         "price": 23.99
+      },
+      {
+        "date": "2026-09-24",
+        "price": 23.99
       }
     ],
     "reference_price": 23.99,
@@ -1279,11 +1307,11 @@
     "url": "https://www.amazon.es/-/en/dp/B019M2EA3Y/?coliid=IWWJMZ0GLGKXD&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "IXZ6EKNKBUTJJ": {
-    "baseline_price": 38.57,
+    "baseline_price": 39.89,
     "image": "https://m.media-amazon.com/images/I/51kyZOKHoTL._SS220_.jpg",
     "last_notified_price": 31.99,
     "last_price": 41.2,
-    "last_seen": "2026-09-23T17:41:52+00:00",
+    "last_seen": "2026-09-24T17:44:14+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -1440,10 +1468,14 @@
       {
         "date": "2026-09-23",
         "price": 41.2
+      },
+      {
+        "date": "2026-09-24",
+        "price": 41.2
       }
     ],
     "reference_price": 43.94,
     "title": "Lenor UNstoppables Perfume Beads for Clothes, 133 Washes (6 x 270g), Freshness Enhancer with Fresh Fragrance",
-    "url": "https://www.amazon.es/-/en/dp/B0F1DLNG5D/?coliid=IXZ6EKNKBUTJJ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/dp/B0F1DLNG5D/?coliid=IXZ6EKNKBUTJJ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   }
 }
