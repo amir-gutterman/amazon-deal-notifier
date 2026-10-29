@@ -10,7 +10,7 @@
     "baseline_price": 13.24,
     "image": "https://m.media-amazon.com/images/I/61lBijrVkNL._SS220_.jpg",
     "last_price": 13.24,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -191,6 +191,10 @@
       {
         "date": "2026-10-28",
         "price": 13.24
+      },
+      {
+        "date": "2026-10-29",
+        "price": 13.24
       }
     ],
     "reference_price": 13.24,
@@ -208,7 +212,7 @@
     "baseline_price": 12.95,
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_price": 12.95,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -469,6 +473,10 @@
       {
         "date": "2026-10-28",
         "price": 12.95
+      },
+      {
+        "date": "2026-10-29",
+        "price": 12.95
       }
     ],
     "reference_price": 12.95,
@@ -476,10 +484,10 @@
     "url": "https://www.amazon.es/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I28K0LJPSN3GEZ": {
-    "baseline_price": 50.05,
+    "baseline_price": 52.99,
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
     "last_price": 52.99,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
@@ -752,6 +760,10 @@
       {
         "date": "2026-10-28",
         "price": 52.99
+      },
+      {
+        "date": "2026-10-29",
+        "price": 52.99
       }
     ],
     "reference_price": 56.99,
@@ -763,7 +775,7 @@
     "image": "https://m.media-amazon.com/images/I/51oT1PzXiiL._SS220_.jpg",
     "last_notified_price": 21.01,
     "last_price": 25.42,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-24",
@@ -992,6 +1004,10 @@
       {
         "date": "2026-10-28",
         "price": 25.42
+      },
+      {
+        "date": "2026-10-29",
+        "price": 25.42
       }
     ],
     "reference_price": 25.42,
@@ -1010,7 +1026,7 @@
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 54.33,
     "last_price": 61.29,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -1299,6 +1315,10 @@
       {
         "date": "2026-10-28",
         "price": 61.29
+      },
+      {
+        "date": "2026-10-29",
+        "price": 61.29
       }
     ],
     "reference_price": 70.1,
@@ -1309,7 +1329,7 @@
     "baseline_price": 11.89,
     "image": "https://m.media-amazon.com/images/I/51ThYk7UjIL._SS220_.jpg",
     "last_price": 11.89,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -1490,6 +1510,10 @@
       {
         "date": "2026-10-28",
         "price": 11.89
+      },
+      {
+        "date": "2026-10-29",
+        "price": 11.89
       }
     ],
     "reference_price": 11.89,
@@ -1665,7 +1689,7 @@
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 23.96,
     "last_price": 44.99,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -1946,6 +1970,10 @@
       {
         "date": "2026-10-28",
         "price": 44.99
+      },
+      {
+        "date": "2026-10-29",
+        "price": 44.99
       }
     ],
     "reference_price": 44.99,
@@ -1957,7 +1985,7 @@
     "image": "https://m.media-amazon.com/images/I/41tNZCf9d7L._SS220_.jpg",
     "last_notified_price": 36.0,
     "last_price": 37.95,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-18",
@@ -2070,6 +2098,10 @@
       {
         "date": "2026-10-28",
         "price": 37.95
+      },
+      {
+        "date": "2026-10-29",
+        "price": 37.95
       }
     ],
     "reference_price": 37.95,
@@ -2081,7 +2113,7 @@
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_notified_price": 20.39,
     "last_price": 20.39,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -2354,6 +2386,10 @@
       {
         "date": "2026-10-28",
         "price": 20.39
+      },
+      {
+        "date": "2026-10-29",
+        "price": 20.39
       }
     ],
     "reference_price": 23.99,
@@ -2412,7 +2448,7 @@
     "image": "https://m.media-amazon.com/images/I/51F-USX2jnL._SS220_.jpg",
     "last_notified_price": 27.71,
     "last_price": 27.71,
-    "last_seen": "2026-10-28T18:39:10+00:00",
+    "last_seen": "2026-10-29T18:47:39+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -2700,6 +2736,10 @@
       },
       {
         "date": "2026-10-28",
+        "price": 27.71
+      },
+      {
+        "date": "2026-10-29",
         "price": 27.71
       }
     ],
