@@ -10,7 +10,7 @@
     "baseline_price": 13.24,
     "image": "https://m.media-amazon.com/images/I/61lBijrVkNL._SS220_.jpg",
     "last_price": 13.24,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -235,6 +235,10 @@
       {
         "date": "2026-11-09",
         "price": 13.24
+      },
+      {
+        "date": "2026-11-10",
+        "price": 13.24
       }
     ],
     "reference_price": 13.24,
@@ -251,8 +255,9 @@
   "I1QF82IO3Y2NNZ": {
     "baseline_price": 12.95,
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
-    "last_price": 12.95,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_notified_price": 11.0,
+    "last_price": 11.0,
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -557,17 +562,22 @@
       {
         "date": "2026-11-09",
         "price": 12.95
+      },
+      {
+        "date": "2026-11-10",
+        "price": 11.0
       }
     ],
     "reference_price": 12.95,
     "title": "Natulim - Detergent Strips for Washing Machine - 50 Washes (Lavender) | Includes Softener, Eco-Friendly, Hypoallergenic, Made in Spain - Clean and Soft Clothes Without Dirty the Planet",
-    "url": "https://www.amazon.es/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/-/en/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I28K0LJPSN3GEZ": {
     "baseline_price": 52.99,
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
-    "last_price": 52.99,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_notified_price": 41.6,
+    "last_price": 41.6,
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
@@ -884,6 +894,10 @@
       {
         "date": "2026-11-09",
         "price": 52.99
+      },
+      {
+        "date": "2026-11-10",
+        "price": 41.6
       }
     ],
     "reference_price": 56.99,
@@ -1182,11 +1196,11 @@
     "url": "https://www.amazon.es/-/en/dp/B07HHG7KXX/?coliid=I2J3R1Y28DKW8J&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I2LDYDO723S2UN": {
-    "baseline_price": 61.75,
+    "baseline_price": 61.83,
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 54.33,
-    "last_price": 67.77,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_price": 67.6,
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -1519,6 +1533,10 @@
       {
         "date": "2026-11-09",
         "price": 67.77
+      },
+      {
+        "date": "2026-11-10",
+        "price": 67.6
       }
     ],
     "reference_price": 70.1,
@@ -1529,7 +1547,7 @@
     "baseline_price": 11.89,
     "image": "https://m.media-amazon.com/images/I/51ThYk7UjIL._SS220_.jpg",
     "last_price": 11.89,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -1754,6 +1772,10 @@
       {
         "date": "2026-11-09",
         "price": 11.89
+      },
+      {
+        "date": "2026-11-10",
+        "price": 11.89
       }
     ],
     "reference_price": 11.89,
@@ -1929,7 +1951,7 @@
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 23.96,
     "last_price": 27.99,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -2254,6 +2276,10 @@
       {
         "date": "2026-11-09",
         "price": 27.99
+      },
+      {
+        "date": "2026-11-10",
+        "price": 27.99
       }
     ],
     "reference_price": 44.99,
@@ -2265,7 +2291,7 @@
     "image": "https://m.media-amazon.com/images/I/41tNZCf9d7L._SS220_.jpg",
     "last_notified_price": 36.0,
     "last_price": 37.95,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-18",
@@ -2422,6 +2448,10 @@
       {
         "date": "2026-11-09",
         "price": 37.95
+      },
+      {
+        "date": "2026-11-10",
+        "price": 37.95
       }
     ],
     "reference_price": 37.95,
@@ -2433,7 +2463,7 @@
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_notified_price": 20.39,
     "last_price": 23.99,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -2750,11 +2780,15 @@
       {
         "date": "2026-11-09",
         "price": 23.99
+      },
+      {
+        "date": "2026-11-10",
+        "price": 23.99
       }
     ],
     "reference_price": 23.99,
     "title": "Omega 3 2000mg (life's\u2122 OMEGA) - Vegan Algae Oil, DHA + EPA 900mg - High Dosage - Branded Raw Material in Triglycerides + Vitamin E - Lab Tested",
-    "url": "https://www.amazon.es/dp/B0D178W9H6/?coliid=IOIABYUDQA6B0&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
+    "url": "https://www.amazon.es/-/en/dp/B0D178W9H6/?coliid=IOIABYUDQA6B0&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "IWWJMZ0GLGKXD": {
     "image": "https://m.media-amazon.com/images/I/51cfZF8twQL._SS220_.jpg",
@@ -2804,11 +2838,11 @@
     "url": "https://www.amazon.es/-/en/dp/B019M2EA3Y/?coliid=IWWJMZ0GLGKXD&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "IXZ6EKNKBUTJJ": {
-    "baseline_price": 40.2,
+    "baseline_price": 39.7,
     "image": "https://m.media-amazon.com/images/I/51F-USX2jnL._SS220_.jpg",
-    "last_notified_price": 27.71,
-    "last_price": 36.95,
-    "last_seen": "2026-11-09T22:51:47+00:00",
+    "last_notified_price": 26.29,
+    "last_price": 26.29,
+    "last_seen": "2026-11-10T20:12:18+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -3141,6 +3175,10 @@
       {
         "date": "2026-11-09",
         "price": 36.95
+      },
+      {
+        "date": "2026-11-10",
+        "price": 26.29
       }
     ],
     "reference_price": 43.94,
