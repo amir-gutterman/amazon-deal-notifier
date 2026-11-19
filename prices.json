@@ -10,7 +10,7 @@
     "baseline_price": 13.24,
     "image": "https://m.media-amazon.com/images/I/61lBijrVkNL._SS220_.jpg",
     "last_price": 13.24,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -271,6 +271,10 @@
       {
         "date": "2026-11-18",
         "price": 13.24
+      },
+      {
+        "date": "2026-11-19",
+        "price": 13.24
       }
     ],
     "reference_price": 13.24,
@@ -289,7 +293,7 @@
     "image": "https://m.media-amazon.com/images/I/41ieAByVSwL._SS220_.jpg",
     "last_notified_price": 11.0,
     "last_price": 11.0,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -630,10 +634,14 @@
       {
         "date": "2026-11-18",
         "price": 11.0
+      },
+      {
+        "date": "2026-11-19",
+        "price": 11.0
       }
     ],
     "reference_price": 12.95,
-    "title": "Natulim Eco-Friendly Laundry Detergent Sheets, 50 Washes, Lavender | Softening effect, biodegradable, hypoallergenic, zero waste, plastic-free, made in Spain, suitable for sensitive skin",
+    "title": "Natulim - Detergent Strips for Washing Machine - 50 Washes (Lavender) | Includes Softener, Eco-Friendly, Hypoallergenic, Made in Spain - Clean and Soft Clothes Without Dirty the Planet",
     "url": "https://www.amazon.es/dp/B0F5QTXB8Z/?coliid=I1QF82IO3Y2NNZ&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I28K0LJPSN3GEZ": {
@@ -641,7 +649,7 @@
     "image": "https://m.media-amazon.com/images/I/41JSYHPrh8L._SS220_.jpg",
     "last_notified_price": 41.6,
     "last_price": 41.6,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-17",
@@ -994,6 +1002,10 @@
       {
         "date": "2026-11-18",
         "price": 41.6
+      },
+      {
+        "date": "2026-11-19",
+        "price": 41.6
       }
     ],
     "reference_price": 56.99,
@@ -1005,7 +1017,7 @@
     "image": "https://m.media-amazon.com/images/I/51oT1PzXiiL._SS220_.jpg",
     "last_notified_price": 21.01,
     "last_price": 25.42,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-24",
@@ -1294,6 +1306,10 @@
       {
         "date": "2026-11-18",
         "price": 25.42
+      },
+      {
+        "date": "2026-11-19",
+        "price": 25.42
       }
     ],
     "reference_price": 25.42,
@@ -1308,11 +1324,11 @@
     "url": "https://www.amazon.es/-/en/dp/B07HHG7KXX/?coliid=I2J3R1Y28DKW8J&colid=2UGOORZ8F8TBP&psc=1&ref_=list_c_wl_gv_vv_lig_pi_dp"
   },
   "I2LDYDO723S2UN": {
-    "baseline_price": 61.52,
+    "baseline_price": 61.75,
     "image": "https://m.media-amazon.com/images/I/31D-9VxSJzL._SS220_.jpg",
     "last_notified_price": 38.45,
-    "last_price": 71.52,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_price": 67.28,
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -1673,6 +1689,10 @@
       {
         "date": "2026-11-18",
         "price": 71.52
+      },
+      {
+        "date": "2026-11-19",
+        "price": 67.28
       }
     ],
     "reference_price": 71.52,
@@ -1683,7 +1703,7 @@
     "baseline_price": 11.89,
     "image": "https://m.media-amazon.com/images/I/51ThYk7UjIL._SS220_.jpg",
     "last_price": 11.89,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-09-13",
@@ -1944,6 +1964,10 @@
       {
         "date": "2026-11-18",
         "price": 11.89
+      },
+      {
+        "date": "2026-11-19",
+        "price": 11.89
       }
     ],
     "reference_price": 11.89,
@@ -2119,7 +2143,7 @@
     "image": "https://m.media-amazon.com/images/I/31FxwCD-YjL._SS220_.jpg",
     "last_notified_price": 23.96,
     "last_price": 44.99,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -2480,6 +2504,10 @@
       {
         "date": "2026-11-18",
         "price": 44.99
+      },
+      {
+        "date": "2026-11-19",
+        "price": 44.99
       }
     ],
     "reference_price": 44.99,
@@ -2491,7 +2519,7 @@
     "image": "https://m.media-amazon.com/images/I/314F3jOaGFL._SS220_.jpg",
     "last_notified_price": 36.0,
     "last_price": 37.95,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-18",
@@ -2684,6 +2712,10 @@
       {
         "date": "2026-11-18",
         "price": 37.95
+      },
+      {
+        "date": "2026-11-19",
+        "price": 37.95
       }
     ],
     "reference_price": 37.95,
@@ -2695,7 +2727,7 @@
     "image": "https://m.media-amazon.com/images/I/31KTeUyrfpL._SS220_.jpg",
     "last_notified_price": 20.39,
     "last_price": 23.99,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-19",
@@ -3048,6 +3080,10 @@
       {
         "date": "2026-11-18",
         "price": 23.99
+      },
+      {
+        "date": "2026-11-19",
+        "price": 23.99
       }
     ],
     "reference_price": 23.99,
@@ -3106,7 +3142,7 @@
     "image": "https://m.media-amazon.com/images/I/51F-USX2jnL._SS220_.jpg",
     "last_notified_price": 26.29,
     "last_price": 26.29,
-    "last_seen": "2026-11-18T21:05:25+00:00",
+    "last_seen": "2026-11-19T21:10:05+00:00",
     "price_history": [
       {
         "date": "2026-08-15",
@@ -3474,6 +3510,10 @@
       },
       {
         "date": "2026-11-18",
+        "price": 26.29
+      },
+      {
+        "date": "2026-11-19",
         "price": 26.29
       }
     ],
